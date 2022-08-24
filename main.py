@@ -1,5 +1,6 @@
 import pickle
 from pathlib import Path
+from typing import Tuple
 
 import pandas as pd
 import plotly.express as px
@@ -17,8 +18,7 @@ ROOT_PATH = Path("D:/Users/laien/Documents/openClassRoom/formation DA/p10")
 
 # region streamlit functions
 @st.cache
-def load_data():
-    # filenames = [filename for filename in filenames]
+def load_data() -> Tuple[pd.DataFrame, pd.DataFrame]:
     data = pd.read_csv(ROOT_PATH / "archives/billets.csv", sep=";")
     test_data = pd.read_csv(ROOT_PATH / "archives/billets_production.csv")
     return data, test_data
@@ -42,18 +42,20 @@ def get_logo():
 
 
 @st.cache
-def ols_summary_to_dataframe(results):
+def ols_summary_to_dataframe(results) -> pd.DataFrame:
     pvals = results.pvalues
     coeff = results.params
     conf_lower = results.conf_int()[0]
     conf_higher = results.conf_int()[1]
 
-    results_df = pd.DataFrame({"pvals": pvals,
-                               "coeff": coeff,
-                               "conf_lower": conf_lower,
-                               "conf_higher": conf_higher
-                               })
-
+    results_df = pd.DataFrame(
+        {
+            "pvals": pvals,
+            "coeff": coeff,
+            "conf_lower": conf_lower,
+            "conf_higher": conf_higher
+        }
+    )
     # Reordering...
     results_df = results_df[["coeff", "pvals", "conf_lower", "conf_higher"]]
     return results_df
@@ -139,8 +141,10 @@ if __name__ == '__main__':
         st.dataframe(genuine)
         st.dataframe(counterfeit)
 
+        df = data.corr().dropna(axis=0, how="all").dropna(axis=1, how='all')
         st.dataframe(
-            data.corr().dropna(axis=0, how="all").dropna(axis=1, how='all').style.background_gradient('coolwarm', 0.5))
+            df.style.background_gradient('coolwarm', 0.5)
+        )
 
         fig = sns.pairplot(data, hue='is_genuine', palette=['#EF553B', '#636EFA'])
         st.pyplot(fig)
@@ -153,11 +157,11 @@ if __name__ == '__main__':
         data = df[df['is_genuine'] != dict_select[select]]
         data['is_genuine'] = data['is_genuine'].astype(int)
 
-        liste_critere = st.multiselect("Selection des variables significatives",
-                                       ["is_genuine", "diagonal", "height_left", "height_right", "margin_up", "length",
-                                        "intercept"],
-                                       ["is_genuine", "diagonal", "height_left", "height_right", "margin_up", "length",
-                                        "intercept"])
+        liste_critere = st.multiselect(
+            "Selection des variables significatives",
+            ["is_genuine", "diagonal", "height_left", "height_right", "margin_up", "length", "intercept"],
+            ["is_genuine", "diagonal", "height_left", "height_right", "margin_up", "length", "intercept"]
+        )
         if 'intercept' in liste_critere:
             liste_critere_2 = liste_critere.copy()
             liste_critere_2.remove('intercept')
@@ -168,8 +172,7 @@ if __name__ == '__main__':
         if "intercept" not in liste_critere:
             tmp += "-1"
 
-        reg = smf.ols(formula=f'margin_low ~ {tmp}',
-                      data=data).fit()
+        reg = smf.ols(formula=f'margin_low ~ {tmp}', data=data).fit()
         st.markdown(f"le score $R^{2}$ du model vaut {reg.rsquared:.3f}, son $R^{2}$ ajusté vaut{reg.rsquared_adj:.3f}")
         st.dataframe(ols_summary_to_dataframe(reg).style.background_gradient(subset='pvals', vmax=1, vmin=0))
 
