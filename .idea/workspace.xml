@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b69edb56-1425-4631-8f54-6fe168cc8eab" name="Changes" comment="Add pycharm config file">
-      <change afterPath="$PROJECT_DIR$/Notebooks/.ipynb_checkpoints/dan_p10_1-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/dan_p10_1.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/dan_p10_2.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notebooks/dan_p10_3.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archives/billets.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archives/billets_production.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archives/billets_test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archives/data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archives/kmeans_model.pickle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archives/lr_model.pickle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/kmeans_model.pickle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/lr_model.pickle" afterDir="false" />
+    <list default="true" id="b69edb56-1425-4631-8f54-6fe168cc8eab" name="Changes" comment="Reformat main">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +46,7 @@
       <workItem from="1660690140864" duration="17422000" />
       <workItem from="1660720593450" duration="6514000" />
       <workItem from="1660764401155" duration="662000" />
-      <workItem from="1661300668532" duration="10824000" />
+      <workItem from="1661300668532" duration="13279000" />
     </task>
     <task id="LOCAL-00001" summary="Add jet brains gitignore">
       <created>1661374691230</created>
@@ -88,7 +76,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661375112471</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="First version">
+      <created>1661375267572</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661375267572</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Reformat main">
+      <created>1661375290712</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661375290712</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +112,12 @@
     <MESSAGE value="Add jetbrains gitignore" />
     <MESSAGE value="Add standard gitignore" />
     <MESSAGE value="Add pycharm config file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add pycharm config file" />
+    <MESSAGE value="First version" />
+    <MESSAGE value="Reformat main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformat main" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/p10$main.coverage" NAME="main Coverage Results" MODIFIED="1661376145048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/p10$streamlit_run_main.coverage" NAME="streamlit.exe Coverage Results" MODIFIED="1661376442744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
