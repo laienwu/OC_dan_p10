@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b69edb56-1425-4631-8f54-6fe168cc8eab" name="Changes" comment="Add jetbrains gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="b69edb56-1425-4631-8f54-6fe168cc8eab" name="Changes" comment="Add pycharm config file">
+      <change afterPath="$PROJECT_DIR$/Notebooks/.ipynb_checkpoints/dan_p10_1-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebooks/dan_p10_1.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebooks/dan_p10_2.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Notebooks/dan_p10_3.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/billets.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/billets_production.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/billets_test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/kmeans_model.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archives/lr_model.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/kmeans_model.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/lr_model.pickle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +58,7 @@
       <workItem from="1660690140864" duration="17422000" />
       <workItem from="1660720593450" duration="6514000" />
       <workItem from="1660764401155" duration="662000" />
-      <workItem from="1661300668532" duration="10439000" />
+      <workItem from="1661300668532" duration="10824000" />
     </task>
     <task id="LOCAL-00001" summary="Add jet brains gitignore">
       <created>1661374691230</created>
@@ -61,7 +74,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661374725894</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add standard gitignore">
+      <created>1661374897401</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661374897401</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add pycharm config file">
+      <created>1661375112471</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661375112471</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,6 +108,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add jet brains gitignore" />
     <MESSAGE value="Add jetbrains gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add jetbrains gitignore" />
+    <MESSAGE value="Add standard gitignore" />
+    <MESSAGE value="Add pycharm config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add pycharm config file" />
   </component>
 </project>
